@@ -1,0 +1,20 @@
+<div class="container">
+    <h1>{{book.name}}</h1>
+    <div class="row">
+        <div class="col-md-3">
+          <div><h4>{{book.name}}</h4></div><br>
+          <div>Author: {{book.auna}}</div>
+          <div>Price: {{book.price}}</div>
+        </div>
+        <div class="col-md-6" style="border-left: 5px solid black">
+            <div *ngFor="let i of book.txt, let j=index">
+                <div class="form-group">
+                    <label class="col-form-label">Review #{{j+1}}</label>
+                    <div>
+                        {{i}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
